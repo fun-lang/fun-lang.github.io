@@ -1,0 +1,107 @@
+<!doctype html>
+<html style="background-color: #f5f5f5; min-height: 100%;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Try Fun: Browser compiler and REPL</title>
+
+  <link href="stylesheets/application.css" rel="stylesheet" />
+  <link href="https://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" />
+  <script src="javascripts/application.js"></script>
+</head>
+<body class="index">
+  <nav class='navbar navbar-default opal-nav' role='navigation'>
+  <div class='container'>
+    <div class='navbar-header'>
+      <a class='navbar-brand' href='.'>
+        <i class='ion-ios7-compose'></i>
+        Try Fun
+      </a>
+      <button class='navbar-toggle' data-target='#opal-navbar' data-toggle='collapse' type='button'>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+      </button>
+    </div>
+    <div class='navbar-collapse collapse' id='opal-navbar'>
+      <ul class='nav navbar-nav'>
+        <li>
+          <a href='https://bitbucket.org/ypyang/aplas16/src/master/README-impl.md'>
+            <i class='ion-ios7-copy'></i>
+            Documentation
+          </a>
+        </li>
+        <li>
+          <a href='https://bitbucket.org/ypyang/aplas16/src/master/README-coq.md'>
+            <i class='ion-android-developer'></i>
+            Coq Proofs
+          </a>
+        </li>
+        <li>
+          <a href='https://bitbucket.org/ypyang/aplas16'>
+            <i class='ion-home'></i>
+            Repo
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <script>$('a[href="'+location.pathname.replace(/\/$/,'')+'"]').parent().addClass('active')</script>
+
+  <div class="container">
+    <link href="stylesheets/codemirror.css" rel="stylesheet" />
+<script src="javascripts/fun.js"></script>
+<script src="javascripts/try.js"></script>
+<script>Opal.load('try_opal');</script>
+<script type="text/javascript">
+$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+</script>
+
+<div class="page-header"><h2>Try Fun in your browser!</h2></div>
+
+<div class="row" id="wrapper">
+  <div id="editor_wrapper" class="col-md-6">
+	<div class="btn-group">
+    <a href="#/" id="run_code" class="btn btn-primary">Run (Cmd+Enter)</a>
+    <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    Examples <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#/" id="action-hoas">HOAS</a></li>
+      <li><a href="#/" id="action-functor">Functor</a></li>
+      <li><a href="#/" id="action-kind">KindPoly</a></li>
+      <li><a href="#/" id="action-tree">Labeled Tree</a></li>
+      <li><a href="#/" id="action-vector">Vector</a></li>
+      <li><a href="#/" id="action-fact">Factorial</a></li>
+      <li><a href="#/" id="action-mutual">Mutual</a></li>
+      <li><a href="#/" id="action-list">PolyList</a></li>
+    </ul>
+    </div>
+    </div>
+    <p></p>
+    <div id="editor" class="well" style="padding:0"></div>
+  </div>
+  <div class="col-md-6">
+    <a href="#" class="btn disabled">Output</a>
+    <p></p>
+    <div id="output" class="well" style="padding:0">
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+  <footer>
+  <a href="http://opalrb.org/"><i class="ion-checkmark"></i> <span style="word-spacing: 0em">Based on Try Opal</span></a>
+</footer>
+
+
+  <script>
+    $('a[href="'+location.pathname.replace(/\/$/,'')+'"]').parent('li').addClass('active')
+  </script>
+</body>
+</html>
