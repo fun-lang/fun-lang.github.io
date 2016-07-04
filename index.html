@@ -58,6 +58,11 @@
 <script>Opal.load('try_opal');</script>
 <script type="text/javascript">
 $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+$(document).ready(function() {
+  if(window.location.href.indexOf('#vector') != -1) {
+    $('#action-vector').click();
+  }
+});
 </script>
 
 <div class="page-header"><h2>Try Fun in your browser!</h2></div>
